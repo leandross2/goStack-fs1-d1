@@ -54,7 +54,6 @@ server.post('/projects/:id/tasks', (req, res) => {
   const newTasks = req.body.tasks
   projects.find((project, index) => {
     if (project.id == id) {
-      // console.log(projects[index].tasks.push('s'))
       projects[index].tasks.concat(newTasks)
     }
   })
